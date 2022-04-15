@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Rock/Paper/Scissor project for The Odin Project</title>
 
-    /* Rock/Paper/Scissor project for The Odin Project*/
+   
 </head>
 <body>
     <script>
 
-        
-    </script>
+/*var choices = ["rock","paper","scissor"];
+var randColor = choices[Math.floor(Math.random() * choices.length)];*/
+
+let choices = ["rock","paper","scissor"];
+
+function computerPlay(){
+    return computerSelection = choices[Math.floor(Math.random() * choices.length)];
+}
+
+playerChoice = prompt('Choose Rock,paper,Scissor').toLowerCase();
+console.log(playerChoice);
+
+
+    computerPlay()
+    console.log(computerSelection);
+
+</script>
 
 
 </body>
