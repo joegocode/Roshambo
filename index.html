@@ -11,19 +11,38 @@
 <body>
     <script>
 
-/*declare variables/created function for random cpu selection/created prompt for user input*/
+/*declare variables/create function for random cpu selection/create prompt for user input*/
 let choices = ["rock","paper","scissor"];
 
 function computerPlay(){
     return computerSelection = choices[Math.floor(Math.random() * choices.length)];
 }
-playerChoice = prompt('Choose Rock,paper,Scissor').toLowerCase();
+playerSelection = prompt('Choose Rock,paper,Scissor').toLowerCase();
+
 computerPlay();
-console.log(playerChoice);
+console.log(playerSelection);
 console.log(computerSelection);
+/*everything above this line works*/
 
-
-
+function singleRound(){
+     if (playerSelection === computerSelection){
+        alert("Its a tie! play again")
+        } else if(playerSelection === 'rock' && computerSelection == 'scissor'){
+            alert('Player wins')
+        } else if (playerSelection === 'rock' && computerSelection == 'paper'){
+            alert("You lose!")
+        }else if (playerSelection === 'scissor' && computerSelection == 'paper'){
+            alert("You win!")
+        }else if (playerSelection === 'scissor' && computerSelection == 'rock'){
+            alert("You lose!")
+        }else if (playerSelection === 'paper' && computerSelection == 'scissor'){
+            alert("You lose!")
+        }else if (playerSelection === 'paper' && computerSelection == 'rock'){
+            alert("You win!")
+        }
+    
+}
+singleRound();
 </script>
 
 
