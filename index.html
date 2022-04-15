@@ -11,21 +11,18 @@
 <body>
     <script>
 
-/*var choices = ["rock","paper","scissor"];
-var randColor = choices[Math.floor(Math.random() * choices.length)];*/
-
+/*declare variables/created function for random cpu selection/created prompt for user input*/
 let choices = ["rock","paper","scissor"];
 
 function computerPlay(){
     return computerSelection = choices[Math.floor(Math.random() * choices.length)];
 }
-
 playerChoice = prompt('Choose Rock,paper,Scissor').toLowerCase();
+computerPlay();
 console.log(playerChoice);
+console.log(computerSelection);
 
 
-    computerPlay()
-    console.log(computerSelection);
 
 </script>
 
