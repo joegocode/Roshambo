@@ -14,6 +14,7 @@
 /*declare variables/create function for random cpu selection/create prompt for user input*/
 let choices = ["rock","paper","scissor"];
 
+/* obtain computer/player selection of rock,paper,scissor*/
 function computerPlay(){
     return computerSelection = choices[Math.floor(Math.random() * choices.length)];
 }
@@ -24,6 +25,7 @@ console.log(playerSelection);
 console.log(computerSelection);
 /*everything above this line works*/
 
+/*function for a single round of play alerting results*/
 function singleRound(){
      if (playerSelection === computerSelection){
         alert("Its a tie! play again")
@@ -40,7 +42,7 @@ function singleRound(){
         }else if (playerSelection === 'paper' && computerSelection == 'rock'){
             alert("You win!")
         }
-    
+   
 }
 singleRound();
 </script>
