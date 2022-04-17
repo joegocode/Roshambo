@@ -29,22 +29,26 @@ console.log(computerSelection);
 function singleRound(){
      if (playerSelection === computerSelection){
         alert("Its a tie! play again")
-        } else if(playerSelection === 'rock' && computerSelection == 'scissor'){
-            alert('Player wins')
-        } else if (playerSelection === 'rock' && computerSelection == 'paper'){
-            alert("You lose!")
-        }else if (playerSelection === 'scissor' && computerSelection == 'paper'){
-            alert("You win!")
-        }else if (playerSelection === 'scissor' && computerSelection == 'rock'){
-            alert("You lose!")
-        }else if (playerSelection === 'paper' && computerSelection == 'scissor'){
-            alert("You lose!")
-        }else if (playerSelection === 'paper' && computerSelection == 'rock'){
-            alert("You win!")
+        } else if(playerSelection == 'rock' && computerSelection == 'scissor'){
+            alert('Player wins, Rock beats Scissor!')
+        } else if (playerSelection == 'rock' && computerSelection == 'paper'){
+            alert("You lose, Paper beats Rock!")
+        }else if (playerSelection == 'scissor' && computerSelection == 'paper'){
+            alert("You win, Scissor beats Paper!")
+        }else if (playerSelection == 'scissor' && computerSelection == 'rock'){
+            alert("You lose, Rock beats Scissors!")
+        }else if (playerSelection == 'paper' && computerSelection == 'scissor'){
+            alert("You lose, Scissors beats Paper!")
+        }else if (playerSelection == 'paper' && computerSelection == 'rock'){
+            alert("You win, Paper beats Rock!")
         }
    
 }
 singleRound();
+/*function that plays five rounds and returns results*/
+
+
+
 </script>
 
 
