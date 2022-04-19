@@ -18,11 +18,11 @@ let choices = ["rock","paper","scissor"];
 function computerPlay(){
     return computerSelection = choices[Math.floor(Math.random() * choices.length)];
 }
-playerSelection = prompt('Choose Rock,paper,Scissor').toLowerCase();
+// playerSelection = prompt('Choose Rock,paper,Scissor').toLowerCase();
 
 computerPlay();
-console.log(playerSelection);
-console.log(computerSelection);
+// console.log(playerSelection);
+// console.log(computerSelection);
 /*everything above this line works*/
 
 /*function for a single round of play alerting results*/
@@ -45,14 +45,23 @@ function singleRound(){
     
 }
 
-singleRound();
+// singleRound();
 /*function that plays five rounds and returns results*
 will return, need to gain understanding of proper loop usage*/
-
-
-
+{
+    function gamePlay(){ 
+        for (let i = 0; i < 5; i++) {
+            playerSelection = prompt('Choose Rock,paper,Scissor').toLowerCase();
+            computerPlay();
+            console.log(playerSelection)
+            console.log(computerSelection)
+            singleRound();
+        }
+    }
+}
+ 
+gamePlay();
 </script>
-
 
 </body>
 </html>
