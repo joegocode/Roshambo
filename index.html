@@ -20,10 +20,8 @@ let computerScore =0;
 function computerPlay(){
     return computerSelection = choices[Math.floor(Math.random() * choices.length)];
 }
-// playerSelection = prompt('Choose Rock,paper,Scissor').toLowerCase();
 
 computerPlay();
-/*everything above this line works*/
 
 /*function for a single round of play alerting results*/
 function singleRound(){
@@ -45,18 +43,26 @@ function singleRound(){
     
 }
 /*function that plays five rounds and returns results*/
-    function gamePlay(){ 
-        for (let i = 0; i < 5; i++) {
-            playerSelection = prompt('Choose Rock,paper,Scissor').toLowerCase();
-            computerPlay();
-            console.log(playerSelection)
-            console.log(computerSelection)
-            singleRound();
-        }
+function gamePlay(){ 
+    for (let i = 0; i < 5; i++) {
+        playerSelection = prompt('Choose Rock,paper,Scissor').toLowerCase();
+        computerPlay();
+        console.log(playerSelection)
+        console.log(computerSelection)
+        singleRound();
     }
+}
  gamePlay();
  console.log(playerScore);
  console.log(computerScore);
+
+/*compare scores and alert winner*/
+if (playerScore > computerScore){
+    alert(`you win!!!,${playerScore} to ${computerScore}`)
+} else if (playerScore < computerScore){
+    alert(`you lose!!! ${playerScore} to ${computerScore}`)
+} else {alert('its a tie, play again')}
+
 </script>
 
 </body>
